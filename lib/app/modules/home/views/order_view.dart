@@ -44,7 +44,7 @@ class OrderView extends GetView<HomeController> {
         Padding(
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SectionTitle(title: "Prodact list", press: () {}),
+          child: SectionTitle(title: "Order list", press: () {}),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
         ...List.generate(controller.orderData.length, (index) {

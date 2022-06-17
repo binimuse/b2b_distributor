@@ -4,6 +4,8 @@ import 'package:b2b_distributor/constant/global_style.dart';
 import 'package:b2b_distributor/constant/reusable_widget.dart';
 import 'package:flutter/material.dart';
 
+import 'order_status.dart';
+
 class OrderDetailPage extends StatefulWidget {
   const OrderDetailPage({Key? key}) : super(key: key);
 
@@ -211,13 +213,23 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
               ),
               RaisedButton(
                 onPressed: () {
-                  showModalBottomSheet<void>(
-                    context: context,
-                    isScrollControlled: true,
-                    builder: (BuildContext context) {
-                      return _showPaymentPopup();
-                    },
+                  Navigator.push(
+                    // ignore: prefer_const_constructors
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation1, animation2) =>
+                          OrderStatusPage(),
+                      transitionDuration: Duration.zero,
+                    ),
                   );
+
+                  // showModalBottomSheet<void>(
+                  //   context: context,
+                  //   isScrollControlled: true,
+                  //   builder: (BuildContext context) {
+                  //     return _showPaymentPopup();
+                  //   },
+                  // );
                 },
                 color: kPrimaryColor,
                 padding: EdgeInsets.symmetric(horizontal: 50),
@@ -225,7 +237,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 child: Text(
-                  "Accepet",
+                  "Confirm",
                   style: TextStyle(
                       fontSize: 14, letterSpacing: 2.2, color: Colors.white),
                 ),

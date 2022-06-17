@@ -1,4 +1,3 @@
-
 import 'package:b2b_distributor/app/routes/app_pages.dart';
 import 'package:b2b_distributor/constant/constants.dart';
 import 'package:b2b_distributor/constant/size_config.dart';
@@ -21,10 +20,10 @@ class NoAccountText extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-         //   Get.toNamed(Routes.SIGNUP);
+            //   Get.toNamed(Routes.SIGNUP);
           },
           child: Text(
-            "Sign Up",
+            "Please contact admin",
             style: TextStyle(
                 fontSize: getProportionateScreenWidth(16),
                 color: kPrimaryColor),

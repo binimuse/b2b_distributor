@@ -6,10 +6,7 @@ class SplashController extends GetxController {
   var currentPage = 0.obs;
   var acc;
   List<Map<String, String>> splashData = [
-    {
-      "text": "Welcome to B2B, Let’s shop!",
-      "image": "assets/images/splash_1.png"
-    },
+    {"text": "Welcome to B2B,", "image": "assets/images/splash_1.png"},
     {
       "text": "We help people conect with store \naround Ethiopia",
       "image": "assets/images/splash_2.png"
